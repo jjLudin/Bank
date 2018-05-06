@@ -1,11 +1,11 @@
-public class Bank {
+public class Account {
     private int accountNumber;
     private int pin;
     private String name;
     private double amount;
 
     // Constructor
-    public void Account(int accountNumber, int pin, String name, double amount)
+    public Account(int accountNumber, int pin, String name, double amount)
     {
         this.accountNumber = accountNumber;
         this.pin = pin;

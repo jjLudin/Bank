@@ -5,11 +5,9 @@ public class Main
     public static void main(String[] args)
     {
         // Create and add accounts to a list treated like a database
-        List<Bank> accounts = new ArrayList<>();
-        Bank John = new Bank();
-        Bank Laurel = new Bank();
-        John.Account(1234, 1234, "John", 100.00);
-        Laurel.Account(5678, 5678, "Laurel", 200.00);
+        List<Account> accounts = new ArrayList<>();
+        Account John = new Account(1234, 1234, "John", 100.00);
+        Account Laurel = new Account(5678, 5678, "Laurel", 200.00);
         accounts.add(John);
         accounts.add(Laurel);
 
@@ -24,13 +22,13 @@ public class Main
     } // main()
 
 
-    private static int verifyAccount(List<Bank> accounts)
+    private static int verifyAccount(List<Account> accounts)
     {
         Scanner s = new Scanner(System.in);
         int accountIndex;
 
         System.out.println();
-        System.out.println("- Welcome to the Bank -");
+        System.out.println("- Welcome to the Account -");
         System.out.println();
 
         Verification: while(true)
@@ -52,7 +50,7 @@ public class Main
     } // verifyAccount()
 
 
-    private static void verifyPin(List<Bank> accounts, int accountIndex)
+    private static void verifyPin(List<Account> accounts, int accountIndex)
     {
         Scanner s = new Scanner(System.in);
         int attempts = 3;
@@ -89,7 +87,7 @@ public class Main
     } // verifyPin()
 
 
-    private static void mainMenu(List<Bank> accounts, int accountIndex)
+    private static void mainMenu(List<Account> accounts, int accountIndex)
     {
         Scanner s = new Scanner(System.in);
         while(true)
@@ -136,7 +134,7 @@ public class Main
     } // mainMenu()
 
 
-    private static void deposit(List<Bank> accounts, int accountIndex)
+    private static void deposit(List<Account> accounts, int accountIndex)
     {
         Scanner s = new Scanner(System.in);
         System.out.println();
@@ -150,7 +148,7 @@ public class Main
     } // deposit()
 
 
-    private static void withdraw(List<Bank> accounts, int accountIndex)
+    private static void withdraw(List<Account> accounts, int accountIndex)
     {
         Scanner s = new Scanner(System.in);
         System.out.println();
@@ -171,7 +169,7 @@ public class Main
     }
 
 
-    private static void promptIfAnotherTransaction(List<Bank> accounts, int accountIndex)
+    private static void promptIfAnotherTransaction(List<Account> accounts, int accountIndex)
     {
         Scanner s = new Scanner(System.in);
         while(true)
